@@ -1,8 +1,16 @@
-/* General Styles */
-body {
+/* gallery css.css */
+
+/* Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+body {
   font-family: Arial, sans-serif;
-  background-color: #0b0c10;
+  background: #17171B; /* changed background */
   color: white;
 }
 
@@ -11,70 +19,68 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1f2833;
-  padding: 10px 20px;
+  padding: 15px 30px;
+  background: #17171B; /* same background */
 }
 
 .navbar a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+.navbar a:hover,
 .navbar a.active {
-  color: #66fcf1;
+  color: #4fc3f7;
 }
 
-.logo {
+.navbar .logo {
   height: 50px;
 }
 
-/* Gallery Hero Section */
+/* Hero section */
 .gallery-hero {
-  background: url('https://cdn.spacetelescope.org/archives/images/thumb300y/heic1509a.jpg') center/cover no-repeat;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  color: white;
-  padding: 0 20px;
-  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.3); /* dark overlay */
+  padding: 60px 20px;
+  background: #17171B;
 }
 
 .gallery-hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 .gallery-hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: #aaa;
 }
 
-/* Gallery Grid */
+/* Gallery grid */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  padding: 40px 20px;
+  padding: 40px;
+  background: #17171B;
 }
 
-/* Gallery Items */
 .gallery-item {
-  border-radius: 15px;
+  position: relative;
   overflow: hidden;
-  transition: transform 0.3s;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .gallery-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  opacity: 0.9;
 }

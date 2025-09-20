@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #000;
+  background: #17171B; /* changed grey shade */
   color: white;
 }
 
@@ -70,6 +70,13 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* card hover smooth */
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-10px); /* lift card */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* shadow */
 }
 
 /* Card image */
@@ -77,6 +84,12 @@ body {
   width: 100%;
   height: 60%;
   object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+}
+
+.card img:hover {
+  transform: scale(1.1); /* zoom in */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* subtle shadow */
 }
 
 /* Card text */
